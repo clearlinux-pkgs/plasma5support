@@ -8,11 +8,11 @@
 # Source0 file verified with key 0xD7574483BB57B18D (jr@jriddell.org)
 #
 Name     : plasma5support
-Version  : 6.3.2
-Release  : 19
-URL      : https://download.kde.org/stable/plasma/6.3.2/plasma5support-6.3.2.tar.xz
-Source0  : https://download.kde.org/stable/plasma/6.3.2/plasma5support-6.3.2.tar.xz
-Source1  : https://download.kde.org/stable/plasma/6.3.2/plasma5support-6.3.2.tar.xz.sig
+Version  : 6.3.3
+Release  : 20
+URL      : https://download.kde.org/stable/plasma/6.3.3/plasma5support-6.3.3.tar.xz
+Source0  : https://download.kde.org/stable/plasma/6.3.3/plasma5support-6.3.3.tar.xz
+Source1  : https://download.kde.org/stable/plasma/6.3.3/plasma5support-6.3.3.tar.xz.sig
 Source2  : D7574483BB57B18D.pkey
 Summary  : No detailed summary available
 Group    : Development/Tools
@@ -123,15 +123,15 @@ chmod 700 .gnupg
 gpg --homedir .gnupg --import %{SOURCE2}
 gpg --homedir .gnupg --status-fd 1 --verify %{SOURCE1} %{SOURCE0} > gpg.status
 grep -E '^\[GNUPG:\] (GOODSIG|EXPKEYSIG) D7574483BB57B18D' gpg.status
-%setup -q -n plasma5support-6.3.2
-cd %{_builddir}/plasma5support-6.3.2
+%setup -q -n plasma5support-6.3.3
+cd %{_builddir}/plasma5support-6.3.3
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1741105917
+export SOURCE_DATE_EPOCH=1742532308
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -168,7 +168,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1741105917
+export SOURCE_DATE_EPOCH=1742532308
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/plasma5support
 cp %{_builddir}/plasma5support-%{version}/LICENSES/CC0-1.0.txt %{buildroot}/usr/share/package-licenses/plasma5support/82da472f6d00dc5f0a651f33ebb320aa9c7b08d0 || :
@@ -237,9 +237,9 @@ popd
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/libPlasma5Support.so.6
-/usr/lib64/libPlasma5Support.so.6.3.2
+/usr/lib64/libPlasma5Support.so.6.3.3
 /usr/lib64/libplasma-geolocation-interface.so.6
-/usr/lib64/libplasma-geolocation-interface.so.6.3.2
+/usr/lib64/libplasma-geolocation-interface.so.6.3.3
 /usr/lib64/qt6/plugins/plasma5support/dataengine/plasma_engine_activities.so
 /usr/lib64/qt6/plugins/plasma5support/dataengine/plasma_engine_apps.so
 /usr/lib64/qt6/plugins/plasma5support/dataengine/plasma_engine_devicenotifications.so
