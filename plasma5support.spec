@@ -9,7 +9,7 @@
 #
 Name     : plasma5support
 Version  : 6.3.5
-Release  : 23
+Release  : 24
 URL      : https://download.kde.org/stable/plasma/6.3.5/plasma5support-6.3.5.tar.xz
 Source0  : https://download.kde.org/stable/plasma/6.3.5/plasma5support-6.3.5.tar.xz
 Source1  : https://download.kde.org/stable/plasma/6.3.5/plasma5support-6.3.5.tar.xz.sig
