@@ -22,6 +22,6 @@ libQt6Sql.so.6
 libQt6Widgets.so.6
 libX11.so.6
 libc.so.6
-libgps.so.30
+libgps.so.31
 libprocesscore.so.10
 libstdc++.so.6
